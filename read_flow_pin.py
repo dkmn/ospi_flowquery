@@ -43,7 +43,7 @@ for loop_counter in range(0, 50000000):
             print ("Estimated flow rate recent (gal/min): ", est_flow_rate_window_recent)
             print ("Estimated flow rate total (gal/min): ", est_flow_rate_window_total)
             print ("Total volume to date: ", total_flow_to_date)
-            avg_flow_rate_to_date = total_flow_to_date / (nowish - overall_start_time)
+            avg_flow_rate_to_date = (60.0 * total_flow_to_date) / (nowish - overall_start_time)
             print ("Average flow rate since script start: ", avg_flow_rate_to_date)
             print ("Current transition count: ", transition_count)
             print ("Current value: ", current_value)
